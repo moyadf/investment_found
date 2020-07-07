@@ -1,0 +1,166 @@
+@import './mixins.scss';
+
+.portfolio {
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        &__title {
+            @include subtitle();
+        }
+
+        &__desc {
+            background: #E4FFEE;
+            border: 0.5px solid var(--success);
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 65px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;          
+
+            span {
+                @include menu-green();
+            }
+        }
+    }
+
+    &__card {
+        margin: 20px 0;
+        background: var(--white);
+        box-shadow: 0px 8px 20px rgba(197, 166, 236, 0.05);
+        border-radius: 20px;
+        padding: 20px;
+
+        .advertisement {
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.6875rem;
+                line-height: 14px;
+                letter-spacing: -0.03em;
+                color: var(--primaryColor);
+                width: 280px;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    &__container {
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 10px;
+
+        .item.item--bg {
+            background-image: url(../images/data.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 125px;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap; 
+            
+            span {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.625rem;    
+                line-height: 14px;
+                letter-spacing: -0.03em;
+                color: var(--cardTxtColor);
+            }
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.75rem;
+                line-height: 16px;
+                letter-spacing: -0.03em;
+                color: var(--primaryColor);
+            }
+        }
+
+        .chart-found {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+                
+            &__percentage {
+                background: var(--success);
+                border-radius: 6px;
+                width: 30px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 14px;                    
+                    text-align: right;
+                    letter-spacing: -0.03em;                    
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .found__name {
+            &__title, &__price {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.75rem;
+                line-height: 16px;
+                letter-spacing: -0.03em;
+                color: var(--primaryColor);
+                margin: 5px 0;
+            }
+
+            &__price {
+                font-weight: 600;
+            }
+        }
+
+        .found-type {
+            &__active, &__desc {
+                @include menu-green();
+                margin: 5px 0;
+            }
+
+            &__active {
+                font-weight: 600;
+            }
+
+            &__desc {
+                color: var(--primaryColor);
+                word-break: break-word;
+                width: 75px;            
+            }
+        }
+
+        .arrows {
+            display: flex;
+            justify-content: space-between;
+
+            .left, .right {
+                background: var(--white);
+                border: 1.5px solid #FAF9FD;
+                box-sizing: border-box;
+                border-radius: 100%;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }        
+    }
+}

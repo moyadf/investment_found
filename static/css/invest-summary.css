@@ -1,0 +1,26 @@
+.invest-sumary {
+  background: var(--white);
+  box-shadow: 0px 8px 20px rgba(197, 166, 236, 0.05);
+  border-radius: 20px;
+  margin: 20px 0;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .invest-sumary .separator {
+    border: 1px solid #FAF9FD;
+    margin: 5px 0; }
+  .invest-sumary__investment, .invest-sumary__yield {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0; }
+    .invest-sumary__investment span, .invest-sumary__investment p, .invest-sumary__yield span, .invest-sumary__yield p {
+      color: var(--primaryColor);
+      font-size: 0.875rem; }
+    .invest-sumary__investment p, .invest-sumary__yield p {
+      font-weight: 600; }
+
+/*# sourceMappingURL=invest-summary.css.map */
